@@ -9,7 +9,7 @@ import sympy as sp
 from PIL import Image
 
 hide_github_icon = """
-#GithubIcon {
+GithubIcon {
   visibility: hidden;
 }
 """
