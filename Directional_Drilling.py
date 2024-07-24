@@ -8,6 +8,16 @@ from math import pi
 import sympy as sp
 from PIL import Image
 
+st.markdown(
+    """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    .viewerBadge_container__1QSob {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Initialize session state for navigation
 if 'page' not in st.session_state:
     st.session_state.page = 'home'
