@@ -9,15 +9,7 @@ import sympy as sp
 from PIL import Image
 
 
-hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    .viewerBadge_container__1QSob {visibility: hidden;}
-    .viewerBadge {display: none;}
-    </style>
-    """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # Initialize session state for navigation
 if 'page' not in st.session_state:
     st.session_state.page = 'home'
