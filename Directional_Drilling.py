@@ -24,18 +24,13 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 remove_element_script = """
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Function to remove the element
-        function removeElement() {
+        var interval = setInterval(function() {
             var element = document.querySelector('div[data-testid="stActionButtonIcon"]');
             if (element) {
                 element.parentNode.removeChild(element);
-            } else {
-                // Retry after 500ms if the element is not found
-                setTimeout(removeElement, 500);
+                clearInterval(interval); // Stop checking once the element is removed
             }
-        }
-        // Initial call to the function
-        removeElement();
+        }, 100); // Check every 100ms
     });
     </script>
     """
