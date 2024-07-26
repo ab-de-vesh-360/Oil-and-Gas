@@ -24,6 +24,22 @@ make_icon_unclikable_style = """
         opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
         cursor: default; /* Change cursor to default to indicate non-interactive */
     }
+    # div[data-testid="stActionButtonLabel"] {
+    #     pointer-events: none !important; /* Disable mouse interactions */
+    #     opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
+    #     cursor: default; /* Change cursor to default to indicate non-interactive */
+    # }
+    </style>
+    """
+st.markdown(make_icon_unclikable_style, unsafe_allow_html=True)
+
+make_lable_unclikable_style = """
+    <style>
+    # div[data-testid="stActionButtonIcon"] {
+    #     pointer-events: none !important; /* Disable mouse interactions */
+    #     opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
+    #     cursor: default; /* Change cursor to default to indicate non-interactive */
+    # }
     div[data-testid="stActionButtonLabel"] {
         pointer-events: none !important; /* Disable mouse interactions */
         opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
@@ -31,9 +47,7 @@ make_icon_unclikable_style = """
     }
     </style>
     """
-st.markdown(make_icon_unclikable_style, unsafe_allow_html=True)
-
-
+st.markdown(make_lable_unclikable_style, unsafe_allow_html=True)
 
 
 
