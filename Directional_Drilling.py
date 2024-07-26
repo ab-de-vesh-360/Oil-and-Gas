@@ -38,6 +38,11 @@ remove_element_script = """
     """
 st.markdown(remove_element_script, unsafe_allow_html=True)
 
+git add your_app.py
+git commit -m "Update CSS and JS to hide and disable GitHub icon"
+git push
+
+
 # Initialize session state for navigation
 if 'page' not in st.session_state:
     st.session_state.page = 'home'
