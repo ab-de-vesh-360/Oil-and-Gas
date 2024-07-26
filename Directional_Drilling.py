@@ -24,6 +24,11 @@ make_icon_unclikable_style = """
         opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
         cursor: default; /* Change cursor to default to indicate non-interactive */
     }
+    div[data-testid="stActionButtonLabel"] {
+        pointer-events: none !important; /* Disable mouse interactions */
+        opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
+        cursor: default; /* Change cursor to default to indicate non-interactive */
+    }
     </style>
     """
 st.markdown(make_icon_unclikable_style, unsafe_allow_html=True)
