@@ -8,13 +8,18 @@ from math import pi
 import sympy as sp
 from PIL import Image
 
-
 hide_github_icon = """
-     #ActionButtonIcon {
-         visibility: hidden;
-     }
+#ActionButtonIcon {
+  visibility: hidden;
+}
 """
 st.markdown(hide_github_icon, unsafe_allow_html=True)
+# hide_github_icon = """
+#      #ActionButtonIcon {
+#          visibility: hidden;
+#      }
+# """
+# st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 # <div data-testid="stActionButtonIcon" class="st-emotion-cache-q16mip e3g6aar1"></div>
 # <div data-testid="stActionButtonIcon" class="st-emotion-cache-q16mip e3g6aar1"></div>
