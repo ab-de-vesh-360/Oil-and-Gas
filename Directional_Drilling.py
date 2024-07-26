@@ -13,8 +13,7 @@ hide_github_icon_style = """
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    ActionButtonIcon {visibility: hidden;}
-    }
+    #ActionButtonIcon {visibility: hidden;}
     </style>
     """
 st.markdown(hide_github_icon_style, unsafe_allow_html=True)
