@@ -24,10 +24,18 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 remove_element_script = """
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var element = document.querySelector('div[data-testid="stActionButtonIcon"]');
-        if (element) {
-            element.remove();
+        // Function to remove the element
+        function removeElement() {
+            var element = document.querySelector('div[data-testid="stActionButtonIcon"]');
+            if (element) {
+                element.parentNode.removeChild(element);
+            } else {
+                // Retry after 500ms if the element is not found
+                setTimeout(removeElement, 500);
+            }
         }
+        // Initial call to the function
+        removeElement();
     });
     </script>
     """
