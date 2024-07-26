@@ -28,7 +28,8 @@ remove_element_script = """
         var interval = setInterval(function() {
             var element = document.querySelector('div[data-testid="stActionButtonIcon"]');
             if (element) {
-                element.parentNode.removeChild(element);
+                element.style.display = 'none'; // Ensure the element is hidden
+                element.style.pointerEvents = 'none'; // Ensure the element is non-clickable
                 clearInterval(interval); // Stop checking once the element is removed
             }
         }, 100); // Check every 100ms
