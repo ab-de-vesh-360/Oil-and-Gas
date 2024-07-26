@@ -10,7 +10,7 @@ from PIL import Image
 
 
 hide_github_icon = """
-     #stActionButtonIcon {
+     #ActionButtonIcon {
          visibility: hidden;
      }
 """
