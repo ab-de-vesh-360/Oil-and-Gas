@@ -8,25 +8,18 @@ from math import pi
 import sympy as sp
 from PIL import Image
 
-hide_github_icon = """
-#ActionButtonIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
-# hide_github_icon = """
-#      #ActionButtonIcon {
-#          visibility: hidden;
-#      }
-# """
-# st.markdown(hide_github_icon, unsafe_allow_html=True)
 
-# <div data-testid="stActionButtonIcon" class="st-emotion-cache-q16mip e3g6aar1"></div>
-# <div data-testid="stActionButtonIcon" class="st-emotion-cache-q16mip e3g6aar1"></div>
-# document.querySelector("#root > div:nth-child(1) > div.withScreencast > div > div > header > div.st-emotion-cache-15ecox0.ezrtsby0 > div > div:nth-child(2) > button > div > div")
-# hide_github_icon = """
-#     .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob, .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137, .viewerBadge_text__1JaDK{ display: none; } """ #MainMenu{ visibility: hidden; } footer { visibility: hidden; } header { visibility: hidden; } “”"
-# st.markdown(hide_github_icon, unsafe_allow_html=True)
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    .viewerBadge_container__1QSob {display: none;} /* Viewer badge container */
+    .viewerBadge {display: none;} /* Viewer badge */
+    .stApp {background-image: none;} /* Remove default Streamlit background */
+    </style>
+    """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # Initialize session state for navigation
 if 'page' not in st.session_state:
     st.session_state.page = 'home'
