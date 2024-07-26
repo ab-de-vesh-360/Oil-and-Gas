@@ -20,14 +20,15 @@ st.markdown(hide_github_icon_style, unsafe_allow_html=True)
 
 hide_github_icn_style = """
     <style>
-    div[data-testid="stActionButtonLabel"] {
+    span[data-testid="stActionButtonLabel"] {
         display: none !important; /* Hide the element */
     }
     </style>
     """
 st.markdown(hide_github_icn_style, unsafe_allow_html=True)
 
-
+# <span data-testid="stActionButtonLabel">Fork</span>
+# <button kind="header" data-testid="baseButton-header" class="st-emotion-cache-mnu3yk ef3psqc6"><div class="st-emotion-cache-1wbqy5l e3g6aar2"><div data-testid="stActionButtonIcon" class="st-emotion-cache-q16mip e3g6aar1"></div></div></button>
 # Initialize session state for navigation
 if 'page' not in st.session_state:
     st.session_state.page = 'home'
