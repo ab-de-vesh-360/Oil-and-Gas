@@ -17,7 +17,16 @@ hide_github_icon_style = """
     </style>
     """
 st.markdown(hide_github_icon_style, unsafe_allow_html=True)
-
+make_icon_unclikable_style = """
+    <style>
+    div[data-testid="stActionButtonIcon"] {
+        pointer-events: none !important; /* Disable mouse interactions */
+        opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
+        cursor: default; /* Change cursor to default to indicate non-interactive */
+    }
+    </style>
+    """
+st.markdown(make_icon_unclikable_style, unsafe_allow_html=True)
 
 
 
