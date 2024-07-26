@@ -38,7 +38,7 @@ remove_element_script = """
     """
 st.markdown(remove_element_script, unsafe_allow_html=True)
 
-git add your_app.py
+git add Directional_Drilling.py
 git commit -m "Update CSS and JS to hide and disable GitHub icon"
 git push
 
