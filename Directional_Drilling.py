@@ -20,19 +20,32 @@ hide_streamlit_style = """
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# Custom JavaScript to remove the GitHub icon element from the DOM
+# Custom JavaScript to remove GitHub icon element from the DOM
 remove_element_script = """
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var interval = setInterval(function() {
+        // Function to remove the GitHub icon element
+        function removeGitHubIcon() {
             var element = document.querySelector('div[data-testid="stActionButtonIcon"]');
             if (element) {
                 element.style.display = 'none'; // Hide the element
                 element.style.pointerEvents = 'none'; // Disable pointer events
                 element.parentNode.removeChild(element); // Remove the element from the DOM
-                clearInterval(interval); // Stop checking once the element is removed
             }
-        }, 100); // Check every 100ms
+        }
+        
+        // Initial attempt to remove the element
+        removeGitHubIcon();
+        
+        // Set up a MutationObserver to watch for changes in the DOM
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                removeGitHubIcon(); // Try to remove the icon if it reappears
+            });
+        });
+        
+        // Start observing the document body for changes
+        observer.observe(document.body, { childList: true, subtree: true });
     });
     </script>
     """
