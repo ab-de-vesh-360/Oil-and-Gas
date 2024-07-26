@@ -9,14 +9,14 @@ import sympy as sp
 from PIL import Image
 
 
-hide_github_icon_style = """
-    <style>
-    div[data-testid="stActionButtonIcon"] {
-        display: none !important; /* Hide the element */
-    }
-    </style>
-    """
-st.markdown(hide_github_icon_style, unsafe_allow_html=True)
+# hide_github_icon_style = """
+#     <style>
+#     div[data-testid="stActionButtonIcon"] {
+#         display: none !important; /* Hide the element */
+#     }
+#     </style>
+#     """
+# st.markdown(hide_github_icon_style, unsafe_allow_html=True)
 make_icon_unclikable_style = """
     <style>
     div[data-testid="stActionButtonIcon"] {
