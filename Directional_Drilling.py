@@ -14,6 +14,7 @@ hide_github_icon_style = """
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     div[data-testid="stActionButtonIcon"] {
+        visibility: hidden;
         display: none !important; /* Hide the element */
     }
     </style>
