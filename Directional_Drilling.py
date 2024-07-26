@@ -16,27 +16,19 @@ hide_streamlit_style = """
     .viewerBadge_container__1QSob {display: none;} /* Viewer badge container */
     .viewerBadge {display: none;} /* Viewer badge */
     .stApp {background-image: none;} /* Remove default Streamlit background */
-    div[data-testid="stActionButtonIcon"] {
-        display: none !important;
-        pointer-events: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        width: 0 !important;
-        height: 0 !important;
-        position: absolute !important;
-        z-index: -1 !important;
-    } /* Hide and disable pointer events */
     </style>
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# Custom JavaScript to remove specific element from the DOM
+# Custom JavaScript to remove the GitHub icon element from the DOM
 remove_element_script = """
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var interval = setInterval(function() {
             var element = document.querySelector('div[data-testid="stActionButtonIcon"]');
             if (element) {
+                element.style.display = 'none'; // Hide the element
+                element.style.pointerEvents = 'none'; // Disable pointer events
                 element.parentNode.removeChild(element); // Remove the element from the DOM
                 clearInterval(interval); // Stop checking once the element is removed
             }
