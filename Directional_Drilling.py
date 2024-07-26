@@ -13,9 +13,11 @@ hide_github_icon_style = """
     <style>
     # #MainMenu {visibility: hidden;}
     # footer {visibility: hidden;}
-    div[data-testid="stActionButtonIcon"] {
-        visibility: hidden;
-        
+    # div[data-testid="stActionButtonIcon"] {
+    #     visibility: hidden;
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    ActionButtonIcon {visibility: hidden;}
     }
     </style>
     """
