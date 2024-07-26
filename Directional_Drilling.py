@@ -16,7 +16,16 @@ hide_streamlit_style = """
     .viewerBadge_container__1QSob {display: none;} /* Viewer badge container */
     .viewerBadge {display: none;} /* Viewer badge */
     .stApp {background-image: none;} /* Remove default Streamlit background */
-    div[data-testid="stActionButtonIcon"] {display: none !important; pointer-events: none !important;} /* Hide and disable pointer events */
+    div[data-testid="stActionButtonIcon"] {
+        display: none !important;
+        pointer-events: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+        z-index: -1 !important;
+    } /* Hide and disable pointer events */
     </style>
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
@@ -28,8 +37,7 @@ remove_element_script = """
         var interval = setInterval(function() {
             var element = document.querySelector('div[data-testid="stActionButtonIcon"]');
             if (element) {
-                element.style.display = 'none'; // Ensure the element is hidden
-                element.style.pointerEvents = 'none'; // Ensure the element is non-clickable
+                element.parentNode.removeChild(element); // Remove the element from the DOM
                 clearInterval(interval); // Stop checking once the element is removed
             }
         }, 100); // Check every 100ms
@@ -39,8 +47,6 @@ remove_element_script = """
 st.markdown(remove_element_script, unsafe_allow_html=True)
 
 
-git commit -m "Update CSS and JS to hide and disable GitHub icon"
-git push
 
 
 # Initialize session state for navigation
