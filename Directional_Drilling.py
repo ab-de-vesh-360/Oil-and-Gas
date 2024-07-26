@@ -11,9 +11,9 @@ from PIL import Image
 
 hide_github_icon_style = """
     <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    div[data-testid="#stActionButtonIcon"] {
+    # #MainMenu {visibility: hidden;}
+    # footer {visibility: hidden;}
+    div[data-testid="stActionButtonIcon"] {
         visibility: hidden;
         
     }
