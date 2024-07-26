@@ -9,16 +9,14 @@ import sympy as sp
 from PIL import Image
 
 
-hide_streamlit_style = """
+hide_github_icon_style = """
     <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    .viewerBadge_container__1QSob {display: none;} /* Viewer badge container */
-    .viewerBadge {display: none;} /* Viewer badge */
-    .stApp {background-image: none;} /* Remove default Streamlit background */
+    div[data-testid="stActionButtonIcon"] {
+        display: none !important; /* Hide the element */
+    }
     </style>
     """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.markdown(hide_github_icon_style, unsafe_allow_html=True)
 
 
 
