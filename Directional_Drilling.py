@@ -9,46 +9,23 @@ import sympy as sp
 from PIL import Image
 
 
-# hide_github_icon_style = """
-#     <style>
-#     div[data-testid="stActionButtonIcon"] {
-#         display: none !important; /* Hide the element */
-#     }
-#     </style>
-#     """
-# st.markdown(hide_github_icon_style, unsafe_allow_html=True)
-make_icon_unclikable_style = """
+hide_github_icon_style = """
     <style>
     div[data-testid="stActionButtonIcon"] {
-        pointer-events: none !important; /* Disable mouse interactions */
-        opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
-        cursor: default; /* Change cursor to default to indicate non-interactive */
+        display: none !important; /* Hide the element */
     }
-    # div[data-testid="stActionButtonLabel"] {
-    #     pointer-events: none !important; /* Disable mouse interactions */
-    #     opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
-    #     cursor: default; /* Change cursor to default to indicate non-interactive */
-    # }
     </style>
     """
-st.markdown(make_icon_unclikable_style, unsafe_allow_html=True)
+st.markdown(hide_github_icon_style, unsafe_allow_html=True)
 
-make_lable_unclikable_style = """
+hide_github_icn_style = """
     <style>
-    # div[data-testid="stActionButtonIcon"] {
-    #     pointer-events: none !important; /* Disable mouse interactions */
-    #     opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
-    #     cursor: default; /* Change cursor to default to indicate non-interactive */
-    # }
     div[data-testid="stActionButtonLabel"] {
-        pointer-events: none !important; /* Disable mouse interactions */
-        opacity: 0.5; /* Optional: Reduce visibility to indicate it's inactive */
-        cursor: default; /* Change cursor to default to indicate non-interactive */
+        display: none !important; /* Hide the element */
     }
     </style>
     """
-st.markdown(make_lable_unclikable_style, unsafe_allow_html=True)
-
+st.markdown(hide_github_icn_style, unsafe_allow_html=True)
 
 
 # Initialize session state for navigation
