@@ -16,10 +16,22 @@ hide_streamlit_style = """
     .viewerBadge_container__1QSob {display: none;} /* Viewer badge container */
     .viewerBadge {display: none;} /* Viewer badge */
     .stApp {background-image: none;} /* Remove default Streamlit background */
-    div[data-testid="stActionButtonIcon"] {display: none;} /* Hide specific element */
     </style>
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+# Custom JavaScript to remove specific element from the DOM
+remove_element_script = """
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var element = document.querySelector('div[data-testid="stActionButtonIcon"]');
+        if (element) {
+            element.remove();
+        }
+    });
+    </script>
+    """
+st.markdown(remove_element_script, unsafe_allow_html=True)
 
 # Initialize session state for navigation
 if 'page' not in st.session_state:
