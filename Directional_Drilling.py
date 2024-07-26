@@ -16,7 +16,7 @@ hide_streamlit_style = """
     .viewerBadge_container__1QSob {display: none;} /* Viewer badge container */
     .viewerBadge {display: none;} /* Viewer badge */
     .stApp {background-image: none;} /* Remove default Streamlit background */
-    div[data-testid="stActionButtonIcon"] {display: none !important;} /* Hide specific element */
+    div[data-testid="stActionButtonIcon"] {display: none !important; pointer-events: none !important;} /* Hide and disable pointer events */
     </style>
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
