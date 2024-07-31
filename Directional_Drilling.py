@@ -37,6 +37,11 @@ if st.session_state.page != 'home':
     if st.sidebar.button('Home'):
         st.session_state.page = 'home'
 if st.session_state.page == 'home':
+    for _ in range(34):
+       st.sidebar.write("")
+    if st.sidebar.button('About the Author'):
+        st.session_state.page = 'about'
+        st.rerun()
     # Initial interface with title and description
     st.markdown("<h1 style='text-align: center; font-size: 40px;text-decoration: underline; font-family: Lucida Bright, sans-serif; margin-bottom: 0; color: dark brown;'>Directional Drilling Well Profiles</h1>", unsafe_allow_html=True)
     st.markdown("*<h2 style='text-align: right; font-size: 20px;text-decoration: italy; font-family: Lucida Bright, sans-serif; margin-bottom: 0; color: green;'>Unleash the Trajectory!!</h2>*", unsafe_allow_html=True)
@@ -59,7 +64,28 @@ if st.session_state.page == 'home':
     elif input_method == 'Horizontal Double Buildup Profile':
         st.session_state.page = 'Horizontal_Double'
         st.rerun()
+if st.session_state.page == 'about':
+    # st.write('Devesh Kumar Singh is a recent graduate with a Bachelor of Technology in Petroleum Engineering from IIT(ISM), Dhanbad, class of 2024. As a dedicated member and former Treasurer of the SPE IIT(ISM) Student Chapter, Devesh has demonstrated leadership and a strong commitment to the petroleum sector. With a deep knowledge and keen interest in the industry, Devesh is poised to make a significant impact as a newcomer to the oil and gas field.')
+    # Formal paragraph about the author
+    # Create columns for text and image
+    col1, col2 = st.columns([3, 1])  # Adjust the ratios as needed
 
+    with col1:
+        st.markdown("""
+        **About the Author**
+
+        Devesh Kumar Singh is a recent graduate with a Bachelor of Technology in Petroleum Engineering from IIT(ISM), Dhanbad, class of 2024.
+        As a dedicated member and former Treasurer of the SPE IIT(ISM) Student Chapter, Devesh has demonstrated leadership and a strong commitment to the petroleum sector.
+        With a deep knowledge and keen interest in the industry, Devesh is poised to make a significant impact as a newcomer to the oil and gas field.
+
+        For more information, visit [Devesh's LinkedIn profile](https://www.linkedin.com/in/devesh-kumar-singh-326435204).
+        """)
+
+
+    with col2:
+        # Load and display the image
+        image = Image.open('images/BuildHold.png')  # Replace with your image path
+        st.image(image, use_column_width=True)
 
 elif st.session_state.page == 'Build_Hold':
     st.write('*It is used in the targets where a large horizontal displacement is required at relatively shallow depth. Shallow kick off point is selected. Under normal conditions, 15° - 55° inclination can be achieved. Although greater inclinations have been drilled in required cases.*')
