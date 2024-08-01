@@ -745,7 +745,7 @@ elif st.session_state.page == 'Horizontal_Double':
         
         # st.pyplot(fig)
         fig.update_layout(
-        title='Build, Hold and Drop Profile',
+        title='Horiontal Double Buildup Profile',
         xaxis_title='Horizontal Distance (ft)',
         yaxis_title='Vertical Depth (ft)',
         yaxis=dict(
