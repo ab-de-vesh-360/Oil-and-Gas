@@ -74,7 +74,7 @@ if st.session_state.page == 'about':
         st.markdown("""
         **About the Author**
 
-        Devesh Kumar Singh is a recent graduate with a Bachelor of Technology in Petroleum Engineering from IIT(ISM), Dhanbad, class of 2024.
+        Devesh Kumar Singh is a recent graduate with a Bachelor of Technology in Petroleum Engineering from Indian Institute of Technology (Indian School of Mines) Dhanbad, class of 2024.
         As a dedicated member and former Treasurer of the SPE IIT(ISM) Student Chapter, Devesh has demonstrated leadership and a strong commitment to the petroleum sector.
         With a deep knowledge and keen interest in the industry, Devesh is poised to make a significant impact as a newcomer to the oil and gas field.
 
@@ -197,7 +197,7 @@ elif st.session_state.page == 'Build_Hold':
         st.plotly_chart(fig)
 
         # Display the data
-        st.subheader('Buil and Hold Trajectory Data')
+        st.subheader('Build and Hold Trajectory Data')
         st.write(pd.DataFrame({'Measured Depth (MD),ft': MDx_values, 'Vertical Depth (v), ft': Vx_values, 'Horizontal Distance (H), ft': Hx_values, 'Inclination Angle (°)' : a_values}))
 
 elif st.session_state.page == 'Read_Build_Hold':
@@ -343,7 +343,7 @@ elif st.session_state.page == 'Build_Hold_Drop':
         st.plotly_chart(fig)
 
         # Display the data
-        st.subheader('Buil, Hold and Drop Trajectory Data')
+        st.subheader('Build, Hold and Drop Trajectory Data')
         st.write(pd.DataFrame({'Measured Depth (MD),ft': MDx_values, 'Vertical Depth (v), ft': Vx_values, 'Horizontal Distance (H), ft': Hx_values, ' Buildup Inclination Angle (°)' : a1_values, 'Drop Angle (°)': drop_values}))
 
 elif st.session_state.page == 'Read_Build_Hold_Drop':
@@ -754,7 +754,7 @@ elif st.session_state.page == 'Horizontal_Double':
         st.plotly_chart(fig)
 
         # Display the data
-        st.subheader('Buil, Hold and Drop Trajectory Data')
+        st.subheader('Horiontal Double Buildup Profile Trajectory Data')
         st.write(pd.DataFrame({'Measured Depth (MD),ft': MDx_values, 'Vertical Depth (v), ft': Vx_values, 'Horizontal Distance (H), ft': Hx_values, '1st Buildup Inclination Angle (°)' : a1_values, '2nd Buildup Inclination Angle (°)': a2_values, 'Total Inclination Angle (°)': at_values}))
 
 elif st.session_state.page == 'Read_Horizontal_Double':
