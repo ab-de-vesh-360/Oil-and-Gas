@@ -84,7 +84,7 @@ if st.session_state.page == 'about':
 
     with col2:
         # Load and display the image
-        image = Image.open('images/Devesh CV Photo.png')  # Replace with your image path
+        image = Image.open('images/Devesh CV Photo Passport Size.jpg')  # Replace with your image path
         st.image(image, use_column_width=True)
 
 elif st.session_state.page == 'Build_Hold':
