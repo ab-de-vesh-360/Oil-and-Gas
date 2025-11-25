@@ -74,9 +74,9 @@ if st.session_state.page == 'about':
         st.markdown("""
         **About the Author**
 
-        Devesh Kumar Singh is a recent graduate with a Bachelor of Technology in Petroleum Engineering from Indian Institute of Technology (Indian School of Mines) Dhanbad, class of 2024.
-        As a dedicated member and former Treasurer of the SPE IIT(ISM) Student Chapter, Devesh has demonstrated leadership and a strong commitment to the petroleum sector.
-        With a deep knowledge and keen interest in the industry, Devesh is poised to make a significant impact as a newcomer to the oil and gas field.
+        Devesh Kumar Singh graduated with a Bachelor of Technology in Petroleum Engineering from the Indian Institute of Technology (Indian School of Mines), Dhanbad, class of 2024. 
+        He is currently working at SLB as a Reservoir and Production Engineer. With strong technical expertise and a passion for the energy sector, Devesh is well-positioned to make 
+        a meaningful contribution as an emerging professional in the oil and gas industry.
 
         For more information, visit [Devesh's LinkedIn profile](https://www.linkedin.com/in/devesh-kumar-singh-326435204).
         """)
